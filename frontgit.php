@@ -4,11 +4,11 @@ class laphpex{
 ###############
 #Class Members#
 ###############
-public $path;		//path to store output files tex,dvi,etc...
+public $path;			//path to store output files tex,dvi,etc...
 public $titleName;		//name of the title in the page
-public $contentName;	//name of the content in the page
+public $contentName;		//name of the content in the page
 public $errorName;		//name of the error div WARNNING:use it only if the html and the php are in the same document
-public $flag;		//check write permissions
+public $flag;			//check write permissions
 
 #############
 #Constructor#
@@ -35,7 +35,7 @@ if(!file_exists($this->path."/$title.tex")){		//check if the file exists or not 
 			exec ("cd $this->path;dvipdfm  $title".".dvi");
 			echo "<a href='$this->path/$title.pdf'> click here to download</a>";	//send the link to download
 		}else
-			echo "<p   onclick='showErrors($title)'> click here to view errors </p>";	
+			echo "<p   onclick='showErrors($title)'> click here to view errors </p>";	/will only work if and only if the html and the php are in the same .php file
 }else 
 	echo "document already exists"; //if the file already exist
 }
