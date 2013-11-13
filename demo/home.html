@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Please Don't Hack me </title>
+<script>
+function showErrors(str)
+{
+if(str==""){
+    document.getElementById("error").innerHTML="";
+     return;
+    }
+xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+{
+ if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("error").innerHTML=xmlhttp.responseText;
+    }
+}
+xmlhttp.open("GET","result/"+str+".log",true);
+xmlhttp.send();
+}
+
+
+</script>
+
+
+<head>
+<body>
+
+<body>
+<form method="POST" >
+Give your pdf a name (for security reasons please use numbers only <br />
+<input type='text' name='mahh_title'><br />
+Write your laTex here.<br />
+<textarea cols=50 rows=20  name='mahh_content' id='content'>
+
+</textarea><br />
+<input type='submit' value='send'>
+</form>
+<br />
+</body>
+</html>
