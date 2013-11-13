@@ -25,8 +25,7 @@ public function build()
 {
 $title=$_POST[$this->titleName];	//get title from the from
 $content=$_POST[$this->contentName];	//get content
-
-if(!file_exists($this->path."/$title.tex")){		//check if the file exists or not if not -> crete new
+if(!file_exists($this->path."/$title.tex")){		//check if the file exists or not if not -> create new
 	exec("touch $this->path/$title.tex");
 	$this->writeToFile("$this->path/$title.tex",$content,'w'); //call the write $content to a .tex file
 	exec ("cd $this->path; latex $title.tex");		//cd into $path and create dvi and log file
