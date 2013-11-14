@@ -4,11 +4,11 @@ class laphpex{
 ###############
 #Class Members#
 ###############
-public $path;			//path to store output files tex,dvi,etc...
-public $titleName;		//name of the title in the page
-public $contentName;		//name of the content in the page
-public $errorName;		//name of the error div WARNNING:use it only if the html and the php are in the same document
-public $flag;			//check write permissions
+private $path;			//path to store output files tex,dvi,etc...
+private $titleName;		//name of the title in the page
+private $contentName;		//name of the content in the page
+private $errorName;		//name of the error div WARNNING:use it only if the html and the php are in the same document
+private $flag;			//check write permissions
 
 #############
 #Constructor#
